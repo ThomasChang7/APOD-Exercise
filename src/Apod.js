@@ -1,16 +1,36 @@
+require('.dotenv').config()
 import 'whatwg-fetch';
 import React, { Component } from 'react';
 import styled from 'styled-components';
 
 
 const Throwaway = styled.p`
-  text-align: center;
-  font-size: 32px;
-  color: #2A9BD6;
+
 `;
 
 export default class Apod extends Component {
-  render() {
-    return <Throwaway>Build me!</Throwaway>;
+  constructor(){
+    super();
+    this.state = {
+      apod: [],
+    }
   }
+
+  getMedia(){
+    fetch(
+      'https://api.nasa.gov/planetary/apod?api_key=' + process.env.NASA_KEY
+    )
+    .then(function(response){
+      return response.json()
+    })
+    .then(function(json){
+      this.setState({apod: json})
+    }.bind(this))
+  }
+
+  componentWillMount(){
+    this.getMedia();
+  }
+
+
 }
