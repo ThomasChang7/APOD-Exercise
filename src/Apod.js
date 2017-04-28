@@ -13,6 +13,7 @@ export default class Apod extends Component {
     super();
     this.state = {
       apod: [],
+      width: 800
     }
   }
 
