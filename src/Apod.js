@@ -1,4 +1,3 @@
-require('.dotenv').config()
 import 'whatwg-fetch';
 import React, { Component } from 'react';
 import styled from 'styled-components';
@@ -20,7 +19,7 @@ export default class Apod extends Component {
 
   getMedia(){
     fetch(
-      'https://api.nasa.gov/planetary/apod?api_key=' + process.env.NASA_KEY
+      'https://api.nasa.gov/planetary/apod?api_key=zt1kgOSJu7vZEh979PbqJfJfE5ZqusYgRBT3OMcn'
     )
     .then(function(response){
       return response.json()
