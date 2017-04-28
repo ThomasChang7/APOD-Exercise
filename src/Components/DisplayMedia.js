@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Description from './Description';
 
 class DisplayMedia extends Component {
   constructor(){
@@ -8,7 +9,7 @@ class DisplayMedia extends Component {
   render(){
     let mediaType;
     if( this.props.apod.media_type === "video" ){
-      mediaType = <iframe  width={ this.props.width } src={ this.props.apod.url} ></iframe>
+      mediaType = <iframe width={ this.props.width } src={ this.props.apod.url} ></iframe>
     } else if ( this.props.width >= 1000 ){
       mediaType = <image src={ this.props.apod.hdurl } width={ this.props.width } />
     } else {
@@ -16,8 +17,9 @@ class DisplayMedia extends Component {
     }
     return(
       <div>
-        <h3>{this.props.apod.date}</h3>
+        <h3>{ this.props.apod.date }</h3>
         {mediaType}
+        <Description apod={ this.props.apod }/>
       </div>
     )
   }
