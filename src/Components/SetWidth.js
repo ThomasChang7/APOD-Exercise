@@ -1,4 +1,17 @@
 import React, { Component } from 'react';
+import styled from 'styled-components';
+
+const Button = styled.input`
+  background: #0074D9;
+  color: #FFFFFF;
+  border-radius: 3px;
+  border: 2px solid #DDDDDD;
+  font-size: 1em;
+  margin: 1em;
+  padding: 0.25em 1em;
+`;
+
+
 
 class SetWidth extends Component {
   constructor(){
@@ -25,7 +38,7 @@ class SetWidth extends Component {
             Set Width:
             <input type="text" ref="width" />
           </label>
-            <input type="submit" value="Update" />
+            <Button type="submit" value="Update" />
         </form>
       </div>
     )
