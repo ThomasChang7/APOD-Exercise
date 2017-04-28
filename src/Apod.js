@@ -2,6 +2,7 @@ require('.dotenv').config()
 import 'whatwg-fetch';
 import React, { Component } from 'react';
 import styled from 'styled-components';
+import DisplayMedia from './Components/DisplayMedia'
 
 
 const Throwaway = styled.p`
