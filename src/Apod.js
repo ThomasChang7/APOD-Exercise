@@ -32,5 +32,13 @@ export default class Apod extends Component {
     this.getMedia();
   }
 
+  render(){
+    return(
+      <div>
+        <h2>Nasa's Astronomy Picture of the Day</h2>
+        <DisplayMedia apod={this.state.apod} />
+      </div>
+    )
+  }
 
 }
