@@ -13,7 +13,7 @@ export default class Apod extends Component {
     super();
     this.state = {
       apod: [],
-      width: 800
+      width: 1001
     }
   }
 
@@ -37,7 +37,7 @@ export default class Apod extends Component {
     return(
       <div>
         <h2>Nasa's Astronomy Picture of the Day</h2>
-        <DisplayMedia apod={this.state.apod} />
+        <DisplayMedia apod={this.state.apod} width={this.state.width} />
       </div>
     )
   }
