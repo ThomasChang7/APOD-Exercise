@@ -4,8 +4,10 @@ import styled from 'styled-components';
 import DisplayMedia from './Components/DisplayMedia'
 import SetWidth from './Components/SetWidth'
 
-const Throwaway = styled.p`
-
+const Dimensions = styled.div`
+  text-align: center;
+  min-width: 900px;
+  display: inline-block
 `;
 
 export default class Apod extends Component {
@@ -39,11 +41,11 @@ export default class Apod extends Component {
 
   render(){
     return(
-      <div>
+      <Dimensions>
         <h2>Nasa's Astronomy Picture of the Day</h2>
         <DisplayMedia apod={this.state.apod} width={this.state.width} />
         <SetWidth updateWidth={this.handleUpdateWidth.bind(this)}/>
-      </div>
+      </Dimensions>
     )
   }
 }
