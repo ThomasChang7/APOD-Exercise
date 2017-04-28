@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import styled from 'styled-components';
 
 const Button = styled.input`
-  background: #0074D9;
-  color: #FFFFFF;
+  background: #FFFFFF;
+  color: #001f3f;
   border-radius: 3px;
   border: 2px solid #DDDDDD;
   font-size: 1em;
@@ -11,7 +11,16 @@ const Button = styled.input`
   padding: 0.25em 1em;
 `;
 
-
+// Using this to style my input broke the functionality of the Set Width Field
+// const Input = styled.input`
+//   font-size: 1.25em;
+//   padding: 0.75em;
+//   margin: 0.5em;
+//   color: #001f3f;
+//   border-radius: 3px;
+//   border: solid 1px #001f3f;
+//   background: #FFFFFF;
+// `
 
 class SetWidth extends Component {
   constructor(){
