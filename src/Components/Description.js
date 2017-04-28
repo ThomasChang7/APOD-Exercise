@@ -6,7 +6,7 @@ class Description extends Component {
       <div>
         <h3>Title: {this.props.apod.title}</h3>
         <h4>{ this.props.apod.explanation }</h4>
-        <h6>copyright: { this.props.apod.copyright }</h6>
+        <h6>copyright: {this.props.apod.copyright}</h6>
       </div>
     )
   }
