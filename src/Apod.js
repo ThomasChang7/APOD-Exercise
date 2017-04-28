@@ -6,8 +6,12 @@ import SetWidth from './Components/SetWidth'
 
 const Dimensions = styled.div`
   text-align: center;
-  min-width: 900px;
   display: inline-block
+`;
+
+const Image = styled.img`
+  width: 80px;
+  height: auto;
 `;
 
 export default class Apod extends Component {
@@ -15,7 +19,7 @@ export default class Apod extends Component {
     super();
     this.state = {
       apod: [],
-      width: 1001
+      width: 800
     }
   }
 
@@ -42,9 +46,9 @@ export default class Apod extends Component {
   render(){
     return(
       <Dimensions>
-        <h2>Nasa's Astronomy Picture of the Day</h2>
+        <h2><Image src="https://upload.wikimedia.org/wikipedia/commons/e/e5/NASA_logo.svg" /> Astronomy Picture of the Day</h2>
         <DisplayMedia apod={this.state.apod} width={this.state.width} />
-        <SetWidth updateWidth={this.handleUpdateWidth.bind(this)}/>
+        <SetWidth updateWidth={this.handleUpdateWidth.bind(this)} />
       </Dimensions>
     )
   }
