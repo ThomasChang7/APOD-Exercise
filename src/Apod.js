@@ -2,7 +2,7 @@ import 'whatwg-fetch';
 import React, { Component } from 'react';
 import styled from 'styled-components';
 import DisplayMedia from './Components/DisplayMedia'
-
+import SetWidth from './Components/SetWidth'
 
 const Throwaway = styled.p`
 
@@ -33,13 +33,17 @@ export default class Apod extends Component {
     this.getMedia();
   }
 
+  handleUpdateWidth(width){
+    this.setState({width: width})
+  }
+
   render(){
     return(
       <div>
         <h2>Nasa's Astronomy Picture of the Day</h2>
         <DisplayMedia apod={this.state.apod} width={this.state.width} />
+        <SetWidth updateWidth={this.handleUpdateWidth.bind(this)}/>
       </div>
     )
   }
-
 }
