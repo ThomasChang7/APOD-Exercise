@@ -6,6 +6,7 @@ const AlignLeft = styled.div`
 `;
 
 class Description extends Component {
+
   render(){
     return (
       <AlignLeft>

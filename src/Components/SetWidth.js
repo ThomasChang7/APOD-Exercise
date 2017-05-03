@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
 
 const Button = styled.input`
   background: #FFFFFF;
@@ -53,5 +54,7 @@ class SetWidth extends Component {
     )
   }
 }
+
+
 
 export default SetWidth;
