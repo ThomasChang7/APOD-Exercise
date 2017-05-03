@@ -33,6 +33,9 @@ export default class Apod extends Component {
     .then(function(json){
       this.setState({apod: json})
     }.bind(this))
+    .catch(function(error){
+      alert("There was a problem with obtaining data, please try again.")
+    })
   }
 
   componentWillMount(){
